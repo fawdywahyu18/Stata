@@ -1,12 +1,12 @@
 clear
 
-global dir		"D:\Kerja\Asisten Mas Ade TNP2K\Susenas"
-global data		"D:\Kerja\Asisten Mas Ade TNP2K\Susenas\Susenas Maret 2017"
+global dir		"D:\Kerja\Susenas"
+global data		"D:\Kerja\Susenas\Susenas Maret 2017"
 cd				"$dir"
 
 set more off
 cap log close
-log using "Cek Konversi_revisiWB_keep", replace
+log using "Cek Konversi_acuan_keep", replace
 
 
 **-----------------------------------------
@@ -45,9 +45,9 @@ collapse (first) r101-r301 f_edible_bdd f_weight serving $nutlist qcal_saya (sum
 save "temp-results", replace
 
 **-----------------------------------------
-**3. Bandingkan hasilnya dengan punya WB
+**3. Bandingkan hasilnya dengan data acuan
 **-----------------------------------------
-u "WB convertion results 31.dta", replace 
+u "convertion results 31.dta", replace 
 quietly levelsof code17
 di r(r) // 218
 
@@ -85,7 +85,7 @@ tot_vit_e_2 tot_vit_e tot_vit_k_2 tot_vit_k;
 
 *keep code yang hasilnya tidak sama
 keep if code==35 | code==64 | code==168 | code==183 | code==209
-save "final result_mergeWB_keep", replace
+save "final result_merge_keep", replace
 log close
-translate "Cek Konversi_revisiWB_keep.smcl" "Cek Konversi_revisiWB_keep.pdf", replace
+translate "Cek Konversi_acuan_keep.smcl" "Cek Konversi_acuan_keep.pdf", replace
 exit
