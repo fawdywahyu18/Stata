@@ -1,8 +1,8 @@
 
 clear
 
-global dir		"D:\Kuliah\Asisten Mas Ade TNP2K\Susenas"
-global data		"D:\Kuliah\Asisten Mas Ade TNP2K\Susenas\Susenas Maret 2017"
+global dir		"D:\Kuliah\Susenas"
+global data		"D:\Kuliah\Susenas Maret 2017"
 cd				"$dir"
 
 use podes_35, clear
