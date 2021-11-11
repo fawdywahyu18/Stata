@@ -1,13 +1,3 @@
-* ==============================================================================
-*
-* Project			: Lomba paper LPS
-* File				: Merge Data from IFLS
-* Authors   		: Muhammad Fawdy Renardi Wahyu
-* Stata version  	: 16
-* Date created		: March 3, 2020
-* Last modified  	: August 1, 2020
-* Last modified by	: Fawdy
-* ==============================================================================
 
 global pathf		"D:\Kerja\Project IFLS"
 global ifls5f		"D:\Kerja\Project IFLS\IFLS 5\Data Household Survey"
